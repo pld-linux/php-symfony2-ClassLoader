@@ -10,7 +10,7 @@ License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
 # Source0-md5:	9f5833bd50860004d49a18c95187745e
-URL:		http://pear.symfony.com/package/ClassLoader/
+URL:		http://symfony.com/doc/current/components/class_loader.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
