@@ -1,15 +1,14 @@
-%define		status		stable
 %define		pearname	ClassLoader
 %define		php_min_version 5.3.3
 %include	/usr/lib/rpm/macros.php
-Summary:	%{pearname} - Symfony2 ClassLoader Component
+Summary:	Symfony2 ClassLoader Component
 Name:		php-symfony2-ClassLoader
-Version:	2.1.6
+Version:	2.3.4
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	4ceb39f6caef003008637c63e37eeef3
+# Source0-md5:	ed85e9c951d19962f326614a798f5b9d
 URL:		http://symfony.com/doc/current/components/class_loader.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
@@ -22,21 +21,17 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Symfony2 ClassLoader Component
-
-In PEAR status of this package is: %{status}.
+The ClassLoader Component loads your project classes automatically if
+they follow some standard PHP conventions.
 
 %prep
 %pear_package_setup
 
 # no packaging of tests
-rm -r .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests .
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist .
 
 # fixups
-mv .%{php_pear_dir}/Symfony/Component/%{pearname}/CHANGELOG.md .
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/.gitattributes
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/.gitignore
 mv docs/%{pearname}/Symfony/Component/%{pearname}/* .
 
 %install
