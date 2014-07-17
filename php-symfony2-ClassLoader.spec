@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 ClassLoader Component
 Name:		php-symfony2-ClassLoader
-Version:	2.4.3
+Version:	2.4.4
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	6ed61bab3510c961e209464ae351fa63
+# Source0-md5:	fb3ca3a5a28ea4de3a1e68a4d850c720
 URL:		http://symfony.com/doc/2.4/components/class_loader/index.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
