@@ -7,7 +7,7 @@ Version:	2.4.8
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
-Source0:	https://github.com/symfony/ClassLoader/archive/v%{version}/%{pearname}-%{version}.tar.gz
+Source0:	https://github.com/symfony/%{pearname}/archive/v%{version}/%{pearname}-%{version}.tar.gz
 # Source0-md5:	4cc13be3aefae3b6a07b268ebc6c1298
 URL:		http://symfony.com/doc/2.4/components/class_loader/index.html
 BuildRequires:	phpab
