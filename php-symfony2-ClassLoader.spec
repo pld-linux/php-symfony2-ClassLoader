@@ -1,15 +1,15 @@
-%define		pearname	ClassLoader
-%define		php_min_version 5.3.3
+%define		package	ClassLoader
+%define		php_min_version 5.3.9
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 ClassLoader Component
 Name:		php-symfony2-ClassLoader
-Version:	2.4.8
+Version:	2.7.3
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
-Source0:	https://github.com/symfony/%{pearname}/archive/v%{version}/%{pearname}-%{version}.tar.gz
-# Source0-md5:	4cc13be3aefae3b6a07b268ebc6c1298
-URL:		http://symfony.com/doc/2.4/components/class_loader/index.html
+Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
+# Source0-md5:	3e6d00e198366065a149749528152575
+URL:		http://symfony.com/doc/2.7/components/class_loader/index.html
 BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
@@ -27,15 +27,15 @@ The ClassLoader Component loads your project classes automatically if
 they follow some standard PHP conventions.
 
 %prep
-%setup -q -n %{pearname}-%{version}
+%setup -q -n %{package}-%{version}
 
 %build
 phpab -n -e '*/Tests/*' -o autoloader.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}
-cp -a *.php $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{package}
+cp -a *.php $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{package}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
