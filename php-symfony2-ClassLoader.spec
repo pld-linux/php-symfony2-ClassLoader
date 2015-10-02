@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 ClassLoader Component
 Name:		php-symfony2-ClassLoader
-Version:	2.7.3
+Version:	2.7.5
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	3e6d00e198366065a149749528152575
+# Source0-md5:	6eee5d1b8c87d22e7052f824dde012f8
 URL:		http://symfony.com/doc/2.7/components/class_loader/index.html
 BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -27,7 +27,7 @@ The ClassLoader Component loads your project classes automatically if
 they follow some standard PHP conventions.
 
 %prep
-%setup -q -n %{package}-%{version}
+%setup -q -n class-loader-%{version}
 
 %build
 phpab -n -e '*/Tests/*' -o autoloader.php .
