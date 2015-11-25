@@ -11,14 +11,12 @@ Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{
 # Source0-md5:	f917353e1b04067b3cf17b04873c6676
 URL:		http://symfony.com/doc/2.7/components/class_loader/index.html
 BuildRequires:	phpab
-BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
 Requires:	php(hash)
 Requires:	php(pcre)
 Requires:	php(spl)
 Requires:	php(tokenizer)
-Requires:	php-pear >= 4:1.3.10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
