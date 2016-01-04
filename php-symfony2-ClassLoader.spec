@@ -17,6 +17,7 @@ Requires:	php(hash)
 Requires:	php(pcre)
 Requires:	php(spl)
 Requires:	php(tokenizer)
+Requires:	php-dirs >= 1.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
