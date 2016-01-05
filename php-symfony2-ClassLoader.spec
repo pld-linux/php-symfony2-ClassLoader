@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 ClassLoader Component
 Name:		php-symfony2-ClassLoader
-Version:	2.7.7
+Version:	2.7.8
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	f917353e1b04067b3cf17b04873c6676
+# Source0-md5:	b798e5a544df9a210a61b7064760185c
 URL:		http://symfony.com/doc/2.7/components/class_loader/index.html
 BuildRequires:	phpab
 BuildRequires:	rpmbuild(macros) >= 1.610
