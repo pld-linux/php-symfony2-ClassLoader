@@ -1,6 +1,5 @@
 %define		package	ClassLoader
 %define		php_min_version 5.3.9
-%include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 ClassLoader Component
 Name:		php-symfony2-ClassLoader
 Version:	2.7.8
